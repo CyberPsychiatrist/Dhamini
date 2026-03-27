@@ -157,7 +157,7 @@ app.listen(PORT, async () => {
   console.log(`
 ╔═════════════════════════════════════════════════════════════════╗
 ║                                                               ║
-║         💎 DHAMINI API SERVER STARTED 💎                       ║
+║         DHAMINI API SERVER STARTED                      ║
 ║                                                               ║
 ║    Consent-based Automated Loan Repayment &                  ║
 ║    Credit Intelligence Platform                                ║
