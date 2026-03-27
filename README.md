@@ -308,5 +308,6 @@ npm run dev
 
 **Authors:** 
 Humphrey Maina- Backend/ Blockchain Developer
+Samson Roy - Backend Developer
 
 **License:** Confidential & Proprietary
