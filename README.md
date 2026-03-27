@@ -295,7 +295,7 @@ npm run dev     # Development with auto-reload
 
 6. Access API:
 - Health check: http://localhost:4000/health
-- API documentation: http://localhost:4000/api
+- API documentation: http://localhost:4000/api, http://localhost:4000/api-docs 
 
 ### Frontend Setup (Coming Soon)
 ```bash
