@@ -42,6 +42,13 @@ Dhamini operates as a five-layer middleware system:
 - [ ] Real-time DCS (Dhamini Credit Score) update (in development)
 - [ ] Basic Lender & Borrower Dashboards (in development)
 
+## Authors:
+
+- **Jeanne-Akinyi**- Leader/Frontend Developer
+- **Humphrey Maina**- Backend/Blockchain Developer
+- **Samson Roy**- Backend Developer
+
+
 ## 📁 Project Structure
 
 ```
@@ -306,10 +313,6 @@ npm run dev
 
 ---
 
-**Authors:** 
 
-**Humphrey Maina- Backend/Blockchain Developer**
-**Samson Roy - Backend Developer**
-**Jeanne-Akinyi - Frontend Developer** 
 
 **License:** Confidential & Proprietary
