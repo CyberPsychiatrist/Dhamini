@@ -198,12 +198,14 @@ export const API_ENDPOINTS = {
   REPAYMENTS_BY_MANDATE: '/repayments/mandate/:mandateId',
 
   // Credit Score
+  CREDIT_SCORE_ME: '/credit-score/me',
   CREDIT_SCORE: '/credit-score',
-  CREDIT_SCORE_USER: '/credit-score/user/:userId',
-  CREDIT_SCORE_UPDATE: '/credit-score/:userId',
+  CREDIT_SCORE_USER: '/credit-score/users/:userId',
+  CREDIT_SCORE_UPDATE: '/credit-score/users/:userId',
+  CREDIT_SCORE_RECALCULATE: '/credit-score/users/:userId/recalculate',
   CREDIT_SCORE_HISTORY: '/credit-score/:userId/history',
   CREDIT_SCORE_STATISTICS: '/credit-score/statistics',
-  CREDIT_SCORE_CRB_CHECK: '/credit-score/crb-check',
+  CREDIT_SCORE_CRB_CHECK: '/credit-score/users/:userId/crb',
 
   // Health
   HEALTH: '/health',

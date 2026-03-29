@@ -307,11 +307,61 @@ const updateCreditScoreForRepayment = async (repayment) => {
   }
 };
 
+const getRiskTierDescription = (tier) => {
+  const descriptions = {
+    'AAA': 'Exceptional - Ultra low risk',
+    'AA': 'Excellent - Very low risk',
+    'A': 'Good - Low risk',
+    'B': 'Fair - Moderate risk',
+    'C': 'Poor - High risk',
+    'D': 'Very Poor - Very high risk',
+    'F': 'Failure - Extreme risk'
+  };
+  return descriptions[tier] || 'Unknown';
+};
+
+const getScoreImprovementTips = (components) => {
+  const tips = [];
+  
+  if (components.repaymentConsistency < 80) {
+    tips.push('Make all repayments on time to improve consistency');
+  }
+  if (components.repaymentHistoryDepth < 50) {
+    tips.push('Build a longer repayment history by maintaining active loans');
+  }
+  if (components.creditUtilization < 50) {
+    tips.push('Reduce your outstanding balance to improve utilization');
+  }
+  if (components.institutionDiversity < 40) {
+    tips.push('Consider diversifying across different lender types');
+  }
+  
+  return tips;
+};
+
+const getCreditLimitEstimate = (dcsScore) => {
+  const baseLimits = {
+    'AAA': 500000,
+    'AA': 300000,
+    'A': 150000,
+    'B': 75000,
+    'C': 30000,
+    'D': 10000,
+    'F': 0
+  };
+  return baseLimits[dcsScore] || 0;
+};
+
 module.exports = {
   calculateCreditScore,
   updateCreditScoreForRepayment,
   calculateRepaymentConsistency,
   calculateHistoryDepth,
   calculateCreditUtilization,
-  calculateInstitutionDiversity
+  calculateInstitutionDiversity,
+  determineRiskTier,
+  getRiskTierDescription,
+  getScoreImprovementTips,
+  getCreditLimitEstimate,
+  WEIGHTS
 };
